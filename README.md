@@ -8,7 +8,8 @@ Well known choice command for windows.
 
 Unfortunately not available (by default) for every windows version out there. Provided here for convenience only.
 
-*Instructions:*
+**Instructions:**
+
 Place the command inside a directory that is part of your path environment variable (or alternatively add this directory to your path)
 
 
@@ -16,7 +17,8 @@ Place the command inside a directory that is part of your path environment varia
 
 Tools that allows to extract words from given string and allows for additional parameters. Allows for input string to be read. It is a stripped down version of another (experimental) tool i was once working on (don't ask).
 
-*Instructions:*
+**Instructions:**
+
 Place the command inside a directory that is part of your path environment variable (or alternatively add this directory to your path)
 
 
@@ -30,14 +32,16 @@ Although it is quite easily to make it work for your setup as well, as long as y
 
 As of the reason: i have one single batch directory that is in my path. That directory contains batch files named after the corresponding tools and which take care of locating the actual tool (so it can be installed anywhere without cluttering the path environment variable).
 
-*Requirements:*
+**Requirements:**
 - MS-DOS Choice command line tool
 - PString commandline tool
 - 7zip command line tool
 - svn commandline tools for windows. In particular, svnversion.exe and svn.exe
 
-*Instructions:*
+**Instructions:**
+
 Place the script inside your work directory and when executed the script automatically creates the required subdirectories.
 
-*Customization:*
+**Customization:**
+
 To do
