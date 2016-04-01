@@ -45,3 +45,12 @@ Place the script inside your work directory and when executed the script automat
 **Customization:**
 
 To do
+
+
+## binutils
+
+Home for collect-aros and its personalized counterpart collect-aros-custom.
+
+This tool is required by the AROS build-process and is responsible for invoking the actual linking process. As such collect-aros 'becomes' part of the binutils.
+
+The custom version was created out of necessity, as the default used environment variable COMPILER_PATH clashes with those variables used in alternative shells such as mingw, gitbash etc. My custom version uses the BINUTILS_PATH environment variable instead.
