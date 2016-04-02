@@ -54,3 +54,11 @@ Home for collect-aros and its personalized counterpart collect-aros-custom.
 This tool is required by the AROS build-process and is responsible for invoking the actual linking process. As such collect-aros 'becomes' part of the binutils.
 
 The custom version was created out of necessity, as the default used environment variable COMPILER_PATH clashes with those variables used in alternative shells such as mingw, gitbash etc. My custom version uses the BINUTILS_PATH environment variable instead.
+
+
+## FPC 3.0 cross-compilers
+
+Inside directory fpc/3.0.0/bin/i386-win32 are 3 cross-compilers.
+- ppcross68k.exe for cross-compiling from fpc 3.0 win32 to Amiga-68k
+- ppcross386.exe for cross-compiling from fpc 3.0 win32 to AROS-i386
+- ppcrossppc.exe for cross-compiling from fpc 3.0 win32 to MorphOS-powerpc
