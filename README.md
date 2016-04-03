@@ -55,6 +55,12 @@ This tool is required by the AROS build-process and is responsible for invoking 
 
 The custom version was created out of necessity, as the default used environment variable COMPILER_PATH clashes with those variables used in alternative shells such as mingw, gitbash etc. My custom version uses the BINUTILS_PATH environment variable instead.
 
+**Instructions:**
+
+- Download mingw AROS binutils from aros-archives. TODO: add link.
+- extract the BinUtils archive to a location that is listed in your path (or ammend your path).
+- when using the 'standard default' collect AROS tool, make sure to set the environment variable COMPILER_PATH. This can be done either systemwide or for a particular user if you so wish.
+
 
 ## FPC 3.0 cross-compilers
 
