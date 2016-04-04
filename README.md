@@ -55,11 +55,47 @@ This tool is required by the AROS build-process and is responsible for invoking 
 
 The custom version was created out of necessity, as the default used environment variable COMPILER_PATH clashes with those variables used in alternative shells such as mingw, gitbash etc. My custom version uses the BINUTILS_PATH environment variable instead.
 
+Alternative location for collect-aros is available in the aros-archives. In which case you should download the file named [i386-aros-gcc-4.5.2-migw32-bin.zip](http://archives.aros-exec.org/index.php?function=showfile&file=development/cross/i386-aros-gcc-4.5.2-migw32-bin.zip) (just click on the link presented at download), and extract the archive in order to retreive the collect executable).
+
 **Instructions:**
 
-- Download mingw AROS binutils from aros-archives. TODO: add link.
-- extract the BinUtils archive to a location that is listed in your path (or ammend your path).
+- Download [mingw AROS binutils](http://archives.aros-exec.org/index.php?function=showfile&file=development/cross/i386-aros-binutils-2.19-1-mingw32-bin.zip) from aros-archives. 
+- extract the BinUtils archive to a temporary location and copy the following files to a directory that is listed in your path (or ammend your path).
+..- i386-aros-as.exe
+..- i386-aros-as.exe
+..- i386-aros-ld.exe
+..- i386-aros-nm.exe
+..- i386-aros-objcopy.exe
+..- i386-aros-objdump.exe
+..- i386-aros-strip.exe
+- copy the collect-aros tool into the same directory as where you put the binutils, and make sure the executable is renamed to i386-aros-collect-aros.exe
 - when using the 'standard default' collect AROS tool, make sure to set the environment variable COMPILER_PATH. This can be done either systemwide or for a particular user if you so wish.
+
+In theory the binutils are now setup correctly and can be used with FPC.
+
+In order to make FPC 'cross'-aware the following (or similar lines) should be part of your FPC.cfg file:
+'''
+# searchpath for tools
+-FD$COMPILER_PATH$
+
+#IFNDEF CPUI386
+#IFNDEF CPUAMD64
+#DEFINE NEEDCROSSBINUTILS
+#ENDIF
+#ENDIF
+
+#IFNDEF WIN32
+#DEFINE NEEDCROSSBINUTILS
+#ENDIF
+
+# binutils prefix for cross compiling
+#IFDEF FPC_CROSSCOMPILING
+#IFDEF NEEDCROSSBINUTILS
+#WRITE A small debug to be able to see if cross-compilation is invoked properly
+  -XP$FPCTARGET-
+#ENDIF
+#ENDIF
+'''
 
 
 ## FPC 3.0 cross-compilers
