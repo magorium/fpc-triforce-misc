@@ -74,28 +74,27 @@ Alternative location for collect-aros is available in the aros-archives. In whic
 In theory the binutils are now setup correctly and can be used with FPC.
 
 In order to make FPC 'cross'-aware the following (or similar lines) should be part of your FPC.cfg file:
-'''
-# searchpath for tools
--FD$COMPILER_PATH$
 
-#IFNDEF CPUI386
-#IFNDEF CPUAMD64
-#DEFINE NEEDCROSSBINUTILS
-#ENDIF
-#ENDIF
-
-#IFNDEF WIN32
-#DEFINE NEEDCROSSBINUTILS
-#ENDIF
-
-# binutils prefix for cross compiling
-#IFDEF FPC_CROSSCOMPILING
-#IFDEF NEEDCROSSBINUTILS
-#WRITE A small debug to be able to see if cross-compilation is invoked properly
-  -XP$FPCTARGET-
-#ENDIF
-#ENDIF
-'''
+    # searchpath for tools
+    -FD$COMPILER_PATH$
+    
+    #IFNDEF CPUI386
+    #IFNDEF CPUAMD64
+    #DEFINE NEEDCROSSBINUTILS
+    #ENDIF
+    #ENDIF
+    
+    #IFNDEF WIN32
+    #DEFINE NEEDCROSSBINUTILS
+    #ENDIF
+    
+    # binutils prefix for cross compiling
+    #IFDEF FPC_CROSSCOMPILING
+    #IFDEF NEEDCROSSBINUTILS
+    #WRITE A small debug to be able to see if cross-compilation is invoked properly
+      -XP$FPCTARGET-
+    #ENDIF
+    #ENDIF
 
 
 ## FPC 3.0 cross-compilers
