@@ -61,13 +61,13 @@ Alternative location for collect-aros is available in the aros-archives. In whic
 
 - Download [mingw AROS binutils](http://archives.aros-exec.org/index.php?function=showfile&file=development/cross/i386-aros-binutils-2.19-1-mingw32-bin.zip) from aros-archives. 
 - extract the BinUtils archive to a temporary location and copy the following files to a directory that is listed in your path (or ammend your path).
-..- i386-aros-as.exe
-..- i386-aros-as.exe
-..- i386-aros-ld.exe
-..- i386-aros-nm.exe
-..- i386-aros-objcopy.exe
-..- i386-aros-objdump.exe
-..- i386-aros-strip.exe
+  - i386-aros-as.exe
+  - i386-aros-as.exe
+  - i386-aros-ld.exe
+  - i386-aros-nm.exe
+  - i386-aros-objcopy.exe
+  - i386-aros-objdump.exe
+  - i386-aros-strip.exe
 - copy the collect-aros tool into the same directory as where you put the binutils, and make sure the executable is renamed to i386-aros-collect-aros.exe
 - when using the 'standard default' collect AROS tool, make sure to set the environment variable COMPILER_PATH. This can be done either systemwide or for a particular user if you so wish.
 
