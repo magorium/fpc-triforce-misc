@@ -104,4 +104,3 @@ Inside directory fpc/3.0.0/bin/i386-win32 are 3 cross-compilers.
 - ppcross386.exe for cross-compiling from fpc 3.0 win32 to AROS-i386
 - ppcrossppc.exe for cross-compiling from fpc 3.0 win32 to MorphOS-powerpc
 
-Attempt to trigger update, as github seems to mess things up for me
