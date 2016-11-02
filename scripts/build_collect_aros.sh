@@ -69,7 +69,7 @@ do
     4 ) TARGET_CPU="x86_64"; break ;;
     5 ) TARGET_CPU="arm"; break ;;
     6 ) TARGET_CPU="sparc"; break ;;
-    * ) print "invalid choice"; break ;;
+    * ) print "invalid choice" ;;
   esac
 done
 
