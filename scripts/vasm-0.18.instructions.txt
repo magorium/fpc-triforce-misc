@@ -1,0 +1,14 @@
+vasm instructions (mingw32, standard)
+=====================================
+
+- download vasm 0.18 (http://sun.hasenbraten.de/vasm/index.php?view=tagged)
+- extract vasm.tar.gz archive
+- cd vasm
+- which gcc (/mingw/bin/gcc.exe)
+- make sure cc variable inside Makefile.Win32FromLinux matches gcc path, e.g. CC = /mingw/bin/gcc.exe
+- create directory obj_win32 (mkdir obj_win32)
+- make -f Makefile.Win32FromLinux CPU=m68k SYNTAX=std
+
+Results (vasmm68k_std_win32 and vobjdump_win32 executables) will be in root of vasm directory.
+
+Original compilation instruction can also be read at http://sun.hasenbraten.de/vasm/index.php?view=compile
