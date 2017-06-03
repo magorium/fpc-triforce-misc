@@ -12,3 +12,7 @@ vasm instructions (mingw32, standard)
 Results (vasmm68k_std_win32 and vobjdump_win32 executables) will be in root of vasm directory.
 
 Original compilation instruction can also be read at http://sun.hasenbraten.de/vasm/index.php?view=compile
+
+Note:
+vlink fails to (cross)-compile from win32 to 68k because generated input listing inside linker script do not contain quoted filenames.
+vlink threads non-quoted strings as identifiers, which will of course fail for the generic drive:\path\name construction.
